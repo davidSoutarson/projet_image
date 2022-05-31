@@ -16,6 +16,7 @@ $images = $image->getImages(IMAGE_DIR_PATH);
    <h1> <?php echo WEB_TITLE ?> </h1>
    <ul>
      <li> <?php echo '<a href= "'. WEB_DIR_URL .'admin.php" > admin  </a>' ?> </li>
+     <li> <a href="./admin/upload.php"> upload </a> </li>
    </ul>
    <ul>
      <?php foreach ($images as $image) : ?>
