@@ -1,13 +1,13 @@
 <?php
-require('config.php');
-require('class/Image.php');
+//require('config.php');
+require('../class/Image.php');
 
 var_dump($_POST);
 
 if (!isset($_POST['formImageSubmit']))
 {
   $error_msg = 'Aucune donnée n\'est fournie.
-  <a href= "'. WEB_DIR_URL .'admin.php" > retour  </a>'; // FC j' ai une warnig
+  <a href= "'. WEB_DIR_URL .'admin/admin.php" > retour  </a>'; // FC j' ai une warnig
 }
 
  if (isset($_POST['formImageSubmit'])) // FC dans le ca ou les valeur son poster

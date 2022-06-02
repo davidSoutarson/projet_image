@@ -1,24 +1,15 @@
 <?php
+require('top.php');
+require('menu.php');
 $image = new Image();
 $images = $image->getImages(IMAGE_DIR_PATH);
 
+
  ?>
- <!DOCTYPE html>
- <html lang="fr" dir="ltr">
-   <head>
-     <meta charset="utf-8">
-     <title><?php echo WEB_TITLE ?></title>
-   </head>
-   <body>
 
-   </body>
 
-   <h1> <?php echo WEB_TITLE ?> </h1>
-   <ul>
-     <li> <?php echo '<a href= "'. WEB_DIR_URL .'admin.php" > admin  </a>' ?> </li>
-     <li> <a href="./admin/upload.php"> upload </a> </li>
-   </ul>
-   <ul>
+   <h1> <?php echo WEB_TITLE ?> index du SITE </h1>
+
      <?php foreach ($images as $image) : ?>
      <li>
        <img src=" <?php echo IMAGE_DIR_URL. $image ['filename'] ?>" />
@@ -34,4 +25,5 @@ $images = $image->getImages(IMAGE_DIR_PATH);
     <?php endforeach ?>
     </ul>
 
- </html>
+  </body>
+  </html>

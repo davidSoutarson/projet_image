@@ -1,18 +1,23 @@
 <?php
-require('config.php');
-require('class/Image.php');
-//require('process_image.php');//fig 16 chaitre 3
+require('../config.php');
+require('../class/Image.php');
+require('top.php');
+require('menu.php');
+//require('../process/process_image.php');//fig 16 chaitre 3
+
 
 $image = new Image();
 $images = $image->getImages(IMAGE_DIR_PATH);
 ?>
-<h1> <?php echo WEB_TITLE ?> Admin </h1>
-<li> <?php echo '<a href= "'. WEB_DIR_URL .'index.php" > accueille </a>' ?> </li>
+<h1>  Admin </h1>
+
+<p> vous pouver modifier les Titre et et les Description </p>
+
 <ul>
   <?php foreach ($images as $image) : ?>
     <li><img src=" <?php echo IMAGE_DIR_URL. $image['filename'] // ['filename']modier chap 3?>" />
 
-      <form method="post" action="process_image.php">
+      <form method="post" action="../process/process_image.php">
 
         <p> Titre : <input type="text" name="title"  value=" <?php
         echo $image['title'] ?> " /> </p>
